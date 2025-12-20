@@ -21,10 +21,13 @@
     fetch("https://JasonTzimas.github.io/data.json")
       .then(res => res.json())
       .then(data => {
+        console.log("data: ", data);
         if (uuid){
-          const data = data[uuid];
-          document.getElementById("title").textContent = data.title;
-          document.getElementById("art-piece").src = `https://JasonTzimas.github.io/${data.image_path}`;
+          console.log("uuid: ", uuid);
+          console.log("art data: ", data[uuid]);
+          const artData = data[uuid];
+          document.getElementById("title").textContent = artData.title;
+          document.getElementById("art-piece").src = `https://JasonTzimas.github.io/${artData.image_path}`;
         }
         
     });
