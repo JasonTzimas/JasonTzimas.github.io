@@ -17,7 +17,7 @@ header {
 }
 
 /* Image styling */
-.artpiece {
+#artpiece {
   width: 20rem;
   height: auto;
   display: block;

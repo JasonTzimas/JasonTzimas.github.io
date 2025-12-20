@@ -9,20 +9,21 @@
 
   <header>
     <div class="header-content">
-      <div>hi</div>
-      <div>Jason</div>
+      <h1 id="title"></h1>
     </div>
   </header>
-  <img class="art-piece" src="images/black_lives_matter.png" alt="black_lives_matter"/>
+  <img id="art-piece" src="images/black_lives_matter.png" alt="black_lives_matter"/>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name");
 
-    const data = fetch('JasonTzimas.github.io/data.json')
+    fetch("https://JasonTzimas.github.io/data.json")
+      .then(res => res.json())
       .then(data => {
-        console.log(data);
-      });
+        document.getElementById("title").textContent = data.title;
+        document.getElementByClass("art-piece").src = `https://JasonTzimas.github.io/${data.image_path}`;
+    });
     if (name) {
       document.getElementById("title").textContent = `Hello, ${name}!`;
     } else {
