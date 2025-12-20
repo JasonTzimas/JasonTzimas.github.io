@@ -20,11 +20,9 @@
     const name = params.get("name");
 
     const data = fetch('JasonTzimas.github.io/data.json')
-      .then(response => response.json())
       .then(data => {
         console.log(data);
       });
-
     if (name) {
       document.getElementById("title").textContent = `Hello, ${name}!`;
     } else {
