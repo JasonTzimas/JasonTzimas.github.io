@@ -1,1 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+/* Header layout */
+header {
+  padding: 2rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Image styling */
+.artpiece {
+  width: 20rem;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+/* Title */
+#title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}

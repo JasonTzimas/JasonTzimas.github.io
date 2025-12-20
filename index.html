@@ -7,18 +7,30 @@
 </head>
 <body>
 
-<h1 id="title">Loading...</h1>
+  <header>
+    <div class="header-content">
+      <div>hi</div>
+      <div>Jason</div>
+    </div>
+  </header>
+  <img class="art-piece" src="images/black_lives_matter.png" alt="black_lives_matter"/>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get("name");
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
 
-  if (name) {
-    document.getElementById("title").textContent = `Hello, ${name}!`;
-  } else {
-    document.getElementById("title").textContent = "Hello, world!";
-  }
-</script>
+    const data = fetch('JasonTzimas.github.io/data.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+
+    if (name) {
+      document.getElementById("title").textContent = `Hello, ${name}!`;
+    } else {
+      document.getElementById("title").textContent = "Hello, world!";
+    }
+  </script>
 
 </body>
 </html>
