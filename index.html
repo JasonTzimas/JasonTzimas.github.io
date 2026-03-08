@@ -49,6 +49,7 @@
           console.log("uuid: ", uuid);
           console.log("art data: ", data[uuid]);
           const artData = data[uuid];
+          document.title = artData.title;
           document.getElementById("title").textContent = artData.title;
           document.getElementById("art-piece").src = `https://JasonTzimas.github.io/${artData.image_path}`;
           document.getElementById("art-piece").src = `https://JasonTzimas.github.io/${artData.image_path}`;
